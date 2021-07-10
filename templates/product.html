@@ -2,9 +2,31 @@
 
 {% block main %}
 <div>
-    <h2>Страница2</h2>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, libero dignissimos voluptatibus inventore esse nesciunt non, dolorum optio minus ut similique nisi quae laudantium ullam nemo dolore beatae! Dolorum, ad.
-    </p>
+    <h2>Генератор пароли</h2>
+    <form method="post">
+        <!-- Поля вводв данных -->
+        <p>
+            <label>Пароль:</label>
+            <input type="text" name="pwd">
+        </p>
+        <p>
+            <label>Сайт:</label>
+            <input type="text" name="salt">
+        </p>
+        <p>
+            <label>Кол-во символов:</label>
+            <input type="text" name="num" value="-">
+        </p>
+        <!-- Кнопка отправки данных -->
+        <p>
+            <input type="submit">
+        </p>
+        <!-- вывод результата -->
+        <p>
+            {% if message %}
+                <h3>{{ message }}</h3>
+            {% endif %}
+        </p>
+    </form>
 </div>
 {% endblock %}
