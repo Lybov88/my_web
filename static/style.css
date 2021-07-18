@@ -1,20 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap');
 
 /* шапка и подвал */
-header,
-footer {
-  height: 100px;
-  background-color: blueviolet;
-  font-family: "Ubuntu", sans-serif;
-  color: azure;
+header, footer {
+	height: 100px;
+	background-color: #3d3c3c;
+	font-family: 'Ubuntu', 'Arial', sans-serif;
+	color: rgb(255, 255, 255);
 }
+
 /* шапка */
 .menu {
-  border: 2px solid black;
+	border: 2px solid black;
+	position: relative;
+	display: flex;
+}
+.navigate {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.navigate a {
+	font-family: 'Ubuntu', 'Arial', sans-serif;
+	color: azure;
+	margin: 0 20px;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 /* основная часть */
 .main {
-  background-color: chartreuse;
-  height: 800px;
+	background-color: #b8b8b8;
+	height: 800px;
 }

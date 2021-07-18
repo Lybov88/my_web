@@ -1,32 +1,34 @@
 {% extends "base.html" %}
 
 {% block main %}
+
 <div>
-    <h2>Генератор пароли</h2>
-    <form method="post">
-        <!-- Поля вводв данных -->
-        <p>
-            <label>Пароль:</label>
-            <input type="text" name="pwd">
-        </p>
-        <p>
-            <label>Сайт:</label>
-            <input type="text" name="salt">
-        </p>
-        <p>
-            <label>Кол-во символов:</label>
-            <input type="text" name="num" value="-">
-        </p>
-        <!-- Кнопка отправки данных -->
-        <p>
-            <input type="submit">
-        </p>
-        <!-- вывод результата -->
-        <p>
-            {% if message %}
-                <h3>{{ message }}</h3>
-            {% endif %}
-        </p>
-    </form>
+	<h2>Генератор пароли</h2>
+	<form method="post">
+		<!-- поля ввода данных -->
+		<p>
+			<label>Пароль:</label>
+			<input type="text" name="pwd">
+		</p>
+		<p>
+			<label>Сайт:</label>
+			<input type="text" name="salt">
+		</p>
+		<p>
+			<label>Кол-во символов:</label>
+			<input type="text" name="num" value="-">
+		</p>
+		<!-- кнопка отправки данных -->
+		<p>
+			<input type="submit">
+		</p>
+		<!-- вывод результата -->
+		<p>
+			{% if message %}
+				<h3>{{ message }}</h3>
+			{% endif %}
+		</p>
+	</form>
 </div>
+
 {% endblock %}
