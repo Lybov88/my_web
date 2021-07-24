@@ -5,17 +5,11 @@
 {% block main %}
 
 <div>
-    <h2>Contact</h2>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nesciunt laboriosam itaque! Similique
-        saepe molestiae sint doloremque cupiditate! Expedita nesciunt dicta perspiciatis odio accusamus tempore dolores
-        eaque id animi atque.
-    </p>
+    <h2>Данные из базы данных</h2>
     <ul>
-        <li>непронумерованный список</li>
-        <li>непронумерованный список</li>
-        <li>непронумерованный список</li>
-        <li>непронумерованный список</li>
+        {% for row in data %}
+        <li>{{ row }}</li>
+        {% endfor %}
     </ul>
 </div>
 
