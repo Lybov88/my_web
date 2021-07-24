@@ -1,37 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap");
 
+/* Универсальный селектор */
+/* * {
+  padding: 50px;
+} */
+body {
+  margin: 0;
+}
 /* шапка и подвал */
-header, footer {
-	height: 100px;
-	background-color: #3d3c3c;
-	font-family: 'Ubuntu', 'Arial', sans-serif;
-	color: rgb(255, 255, 255);
+header,
+footer {
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  background-color: #3d3c3c;
+  font-family: "Ubuntu", "Arial", sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 /* шапка */
 .menu {
-	border: 2px solid black;
-	position: relative;
-	display: flex;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
 }
 .navigate {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
+
 .navigate a {
-	font-family: 'Ubuntu', 'Arial', sans-serif;
-	color: azure;
-	margin: 0 20px;
-	text-decoration: none;
-	text-transform: uppercase;
+  font-family: "Ubuntu", "Arial", sans-serif;
+  color: azure;
+  margin: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* /* псевдоклассы положения
+.navigate div:first-child{
+	font-size: 20px;
+}
+.navigate div:last-child{
+	/* color: cadetblue; */
+/* text-transform: lowercase; */
+/* font-size: 40px; */
+/* }
+.navigate div:nth-child(odd) {
+font-size: 5px; */
+/* } */
+
+/* псевдокласс состояния, который срабатывает при наведении курсора */
+.navigate a:hover {
+  color: #ca802a;
+  /* font-size: 20px; */
+}
+/* псевдокласс состояния, который срабатывает при нажатии элемента */
+.navigate a:active {
+  color: #288520;
+  /* font-size: 20px; */
+}
+/* псевдокласс состояния, который срабатывает при посещении ссылки
+.navigate a:visited {
+  color: #a013b3;
+  /* font-size: 20px; */
+/* } */
+
+/* псевдоэлемент */
+/* .navigate div::before {
+	content: "*";
+	color: #ca802a;
+} */
+
+.navigate div::after {
+  content: "|";
+  color: azure;
+}
+.navigate div:last-child::after {
+  content: none;
 }
 
 /* основная часть */
 .main {
-	background-color: #b8b8b8;
-	height: 800px;
+  background-color: #b8b8b8;
+  height: 800px;
+}
+li:first-child {
+  color: brown;
+}
+.generator {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
