@@ -121,3 +121,30 @@ form {
   display: inline-block;
   width: 150px;
 }
+
+/* таблица */
+.table_db {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.table_db table {
+  width: 90%;
+  border: 2px solid black;
+}
+
+.table_db th,
+td {
+  border: 2px solid black;
+}
+
+/* подвал */
+footer {
+  color: #b8b8b8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

@@ -4,13 +4,34 @@
 <!-- Разметка основной части первой страницы -->
 {% block main %}
 
-<div>
-    <h2>Данные из базы данных</h2>
-    <ul>
-        {% for row in data %}
-        <li>{{ row }}</li>
-        {% endfor %}
-    </ul>
+<div class="table_db">
+	<h2>Данные из базы данных</h2>
+	<!-- <ul>
+		{% for row in data %}
+		<li>{{ row }}</li>
+		{% endfor %}
+	</ul> -->
+	<!-- таблица -->
+	<table>
+		<!-- строка заголовков -->
+		<tr>
+			<!-- заголовки столбцов -->
+			<th>Form Data</th>
+			<th>Address</th>
+			<th>Browser Data</th>
+			<th>Result</th>
+		</tr>
+		<!-- строки для данных -->
+		{% for row in data %}
+		<tr>
+			<!-- ячейки данных -->
+			<td>{{ row[0] }}</td>
+			<td>{{ row[1] }}</td>
+			<td>{{ row[2] }}</td>
+			<td>{{ row[3] }}</td>
+		</tr>
+		{% endfor %}
+	</table>
 </div>
 
 {% endblock %}
